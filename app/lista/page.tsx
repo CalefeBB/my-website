@@ -58,13 +58,13 @@ export default function ListaDesejos() {
         <form onSubmit={handleSubmit} className="lista-form">
           <div className="lista-field">
             <label htmlFor="texto" className="lista-label">
-              O que queres de presente? ✨
+              O que você quer de presente? ✨
             </label>
             <textarea
               id="texto"
               value={texto}
               onChange={(e) => setTexto(e.target.value)}
-              placeholder="Escreve aqui o teu desejo..."
+              placeholder="Escreva aqui seu desejo..."
               maxLength={200}
               rows={3}
               className="lista-textarea"
@@ -94,14 +94,14 @@ export default function ListaDesejos() {
             disabled={enviando || !texto.trim()}
             className="lista-btn"
           >
-            {enviando ? 'A enviar...' : '✦ Adicionar à lista ✦'}
+            {enviando ? 'Enviando...' : '✦ Adicionar à lista ✦'}
           </button>
         </form>
 
         {/* Sent wishes in this session */}
         {enviados.length > 0 && (
           <div className="lista-enviados">
-            <h2 className="lista-enviados-title">Já adicionaste:</h2>
+            <h2 className="lista-enviados-title">Já adicionou:</h2>
             <ul className="lista-enviados-list">
               {enviados.map((item, i) => (
                 <li key={i} className="lista-enviados-item">
@@ -118,7 +118,7 @@ export default function ListaDesejos() {
 
       {/* Footer */}
       <footer className="lista-footer">
-        <p>Com amor, o teu faz-tudo 🖤</p>
+        <p>Com amor, o seu faz-tudo 🖤</p>
       </footer>
     </main>
   );

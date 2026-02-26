@@ -21,7 +21,7 @@ export default function VerPedidos() {
       const data = await res.json();
       setDesejos(data.reverse()); // most recent first
     } catch {
-      setErro('Não foi possível carregar a lista. Tenta de novo!');
+      setErro('Não foi possível carregar a lista. Tente de novo!');
     } finally {
       setLoading(false);
     }
@@ -32,7 +32,7 @@ export default function VerPedidos() {
   }, []);
 
   function formatDate(iso: string) {
-    return new Date(iso).toLocaleDateString('pt-PT', {
+    return new Date(iso).toLocaleDateString('pt-BR', {
       day: '2-digit',
       month: 'long',
       year: 'numeric',
@@ -48,7 +48,7 @@ export default function VerPedidos() {
       <div className="ver-container">
         {/* Header */}
         <div className="ver-header">
-          <span className="ver-badge">✦ APENAS PARA TI ✦</span>
+          <span className="ver-badge">✦ APENAS PARA VOCÊ ✦</span>
           <h1 className="ver-title">Pedidos da Patroa</h1>
           <p className="ver-subtitle">
             A lista secreta de desejos da Maria Alice 🎀
@@ -72,7 +72,7 @@ export default function VerPedidos() {
             <p className="ver-empty-icon">🕯️</p>
             <p>Ainda não há desejos na lista.</p>
             <p className="ver-empty-hint">
-              Partilha o link{' '}
+              Compartilha o link{' '}
               <span className="ver-link-hint">/lista</span> com ela!
             </p>
           </div>
@@ -107,7 +107,7 @@ export default function VerPedidos() {
       </div>
 
       <footer className="ver-footer">
-        <p>🖤 Esta página é só tua. Guarda bem o link!</p>
+        <p>🖤 Esta página é só sua. Guarda bem o link!</p>
       </footer>
     </main>
   );
