@@ -378,6 +378,77 @@ body {
   50% { opacity: 0.6; }
 }
 
+/* === A EMPREGADA — Illustrated SVG Scene === */
+.empregada-scene {
+  max-width: 320px;
+  margin: 2rem auto 0;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(200, 152, 14, 0.3),
+    0 12px 50px rgba(0, 0, 0, 0.9),
+    0 0 80px rgba(100, 30, 0, 0.1);
+  animation: empFlicker 10s ease-in-out infinite;
+}
+
+@keyframes empFlicker {
+  0%, 94%, 100% { opacity: 1; filter: brightness(1); }
+  95%  { opacity: 0.88; filter: brightness(0.9); }
+  96%  { opacity: 1;    filter: brightness(1.02); }
+  97%  { opacity: 0.94; filter: brightness(0.96); }
+}
+
+@keyframes empHairSway {
+  0%, 100% { transform: rotate(0deg); }
+  30%      { transform: rotate(1.2deg); }
+  70%      { transform: rotate(-0.9deg); }
+}
+
+.emp-hair-sway {
+  transform-origin: 50% 0%;
+  transform-box: fill-box;
+  animation: empHairSway 5s ease-in-out infinite;
+}
+
+@keyframes empHairPull {
+  0%, 100% { transform: rotate(0deg) translateX(0); }
+  50%      { transform: rotate(3.5deg) translateX(4px); }
+}
+
+.emp-hair-pull {
+  transform-origin: 50% 0%;
+  transform-box: fill-box;
+  animation: empHairPull 0.9s ease-in-out infinite;
+}
+
+.emp-hand {
+  transform: translateX(88px);
+  opacity: 0;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s ease;
+}
+
+.emp-hand.emp-hand-active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.emp-tear-hidden { opacity: 0; }
+
+.emp-tear {
+  opacity: 0;
+  animation: empTear 2.2s ease-in-out forwards;
+}
+
+@keyframes empTear {
+  0%   { opacity: 0; transform: translateY(-3px); }
+  20%  { opacity: 0.8; transform: translateY(0); }
+  80%  { opacity: 0.4; transform: translateY(8px); }
+  100% { opacity: 0; transform: translateY(14px); }
+}
+
+.emp-rec-dot  { animation: recBlink 1s ease-in-out infinite; }
+.emp-timecode { animation: timecodeFlicker 3s ease-in-out infinite; }
+
 /* Background gradient */
 .bg-love {
   background: radial-gradient(ellipse at top, #3d0030 0%, #1a0010 50%, #0d000a 100%);
