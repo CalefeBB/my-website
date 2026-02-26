@@ -156,6 +156,128 @@ body {
   100% { filter: hue-rotate(360deg); }
 }
 
+/* Hair Pull Scene ("A Empregada") */
+.hair-scene-stage {
+  position: relative;
+  height: 160px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.hair-head {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hair-strands {
+  position: absolute;
+  bottom: 100%;
+  width: 80px;
+  height: 40px;
+}
+
+.hair-strand {
+  position: absolute;
+  bottom: 0;
+  width: 3px;
+  border-radius: 2px;
+  background: linear-gradient(to top, #a0522d, #d2691e);
+  transform-origin: bottom center;
+  transition: opacity 0.3s ease, transform 0.5s ease;
+}
+
+.hair-strand.plucked {
+  opacity: 0;
+  transform: translateY(-20px) rotate(180deg) !important;
+  transition: opacity 0.6s ease 0.1s, transform 0.6s ease;
+}
+
+.hair-head-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(255, 182, 193, 0.25), rgba(255, 105, 180, 0.15));
+  border: 2px solid rgba(255, 105, 180, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hair-face {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.plucked-hairs-area {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  pointer-events: none;
+}
+
+.plucked-hair-float {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 18px;
+  background: linear-gradient(to bottom, #d2691e, transparent);
+  border-radius: 1px;
+  opacity: 0;
+  transform: translateY(-10px) rotate(45deg);
+}
+
+.plucked-hair-float.visible {
+  animation: hairFall 2s ease forwards;
+}
+
+@keyframes hairFall {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) rotate(0deg);
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(50px) rotate(120deg);
+  }
+}
+
+.hair-scissors {
+  position: absolute;
+  top: 20px;
+  right: 20%;
+  font-size: 1.5rem;
+  opacity: 0.4;
+  transition: all 0.3s ease;
+  transform: rotate(-30deg);
+}
+
+.hair-scissors.snipping {
+  animation: snip 2.5s ease-in-out infinite;
+}
+
+@keyframes snip {
+  0%, 100% {
+    transform: rotate(-30deg) scale(1);
+    opacity: 0.4;
+  }
+  40% {
+    transform: rotate(10deg) scale(1.2);
+    opacity: 0.9;
+  }
+  60% {
+    transform: rotate(-10deg) scale(1.1);
+    opacity: 0.7;
+  }
+}
+
 /* Background gradient */
 .bg-love {
   background: radial-gradient(ellipse at top, #3d0030 0%, #1a0010 50%, #0d000a 100%);

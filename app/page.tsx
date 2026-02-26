@@ -1,5 +1,6 @@
 import Image from "next/image";
 import CountdownBirthday from "./components/CountdownBirthday";
+import HairPullScene from "./components/HairPullScene";
 
 export default function Home() {
   const reasons = [
@@ -135,6 +136,7 @@ export default function Home() {
           Mal posso esperar para celebrar você!
         </p>
         <CountdownBirthday />
+        <HairPullScene />
         <div className="heart-divider mt-12 text-pink-400 text-xl">🎂</div>
       </section>
 
