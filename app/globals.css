@@ -184,7 +184,7 @@ body {
   bottom: 0;
   width: 3px;
   border-radius: 2px;
-  background: linear-gradient(to top, #a0522d, #d2691e);
+  background: linear-gradient(to top, #c9a84c, #f5e0a3);
   transform-origin: bottom center;
   transition: opacity 0.3s ease, transform 0.5s ease;
 }
@@ -225,7 +225,7 @@ body {
   top: 0;
   width: 2px;
   height: 18px;
-  background: linear-gradient(to bottom, #d2691e, transparent);
+  background: linear-gradient(to bottom, #f0c84a, transparent);
   border-radius: 1px;
   opacity: 0;
   transform: translateY(-10px) rotate(45deg);

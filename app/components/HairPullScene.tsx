@@ -64,13 +64,6 @@ export default function HairPullScene() {
         </div>
       </div>
 
-      {/* Caption */}
-      <p
-        className="text-pink-500/60 text-xs mt-4 tracking-wide text-center"
-        style={{ fontFamily: "var(--font-lato)" }}
-      >
-        🎬 A Empregada — cena clássica
-      </p>
     </div>
   );
 }
