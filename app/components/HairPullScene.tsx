@@ -64,6 +64,21 @@ export default function HairPullScene() {
         </div>
       </div>
 
+      {/* Retro VHS badge */}
+      <div className="vhs-badge mt-5">
+        <div className="vhs-scanlines" />
+        <div className="vhs-content">
+          <div className="vhs-top-row">
+            <span className="vhs-rec-dot" />
+            <span className="vhs-rec-text">REC</span>
+            <span className="vhs-play">▶ PLAY</span>
+          </div>
+          <p className="vhs-title">A Empregada</p>
+          <p className="vhs-subtitle">cena clássica</p>
+          <div className="vhs-timecode">00:04:27</div>
+        </div>
+      </div>
+
     </div>
   );
 }

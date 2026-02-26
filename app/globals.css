@@ -278,6 +278,106 @@ body {
   }
 }
 
+/* Retro VHS Badge */
+.vhs-badge {
+  position: relative;
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 12px 16px;
+  max-width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  font-family: "Courier New", monospace;
+}
+
+.vhs-scanlines {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 2px,
+    rgba(255, 255, 255, 0.03) 2px,
+    rgba(255, 255, 255, 0.03) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.vhs-content {
+  position: relative;
+  z-index: 2;
+}
+
+.vhs-top-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.vhs-rec-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff3333;
+  box-shadow: 0 0 6px #ff3333;
+  animation: recBlink 1s ease-in-out infinite;
+}
+
+@keyframes recBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+.vhs-rec-text {
+  font-size: 0.65rem;
+  color: #ff3333;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.vhs-play {
+  font-size: 0.6rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-left: auto;
+  letter-spacing: 1px;
+}
+
+.vhs-title {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+  text-shadow: 0 0 8px rgba(255, 105, 180, 0.5);
+}
+
+.vhs-subtitle {
+  font-size: 0.65rem;
+  color: rgba(255, 105, 180, 0.6);
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.vhs-timecode {
+  font-size: 0.6rem;
+  color: rgba(255, 255, 255, 0.3);
+  text-align: right;
+  margin-top: 8px;
+  letter-spacing: 1.5px;
+  animation: timecodeFlicker 3s ease-in-out infinite;
+}
+
+@keyframes timecodeFlicker {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
 /* Background gradient */
 .bg-love {
   background: radial-gradient(ellipse at top, #3d0030 0%, #1a0010 50%, #0d000a 100%);
